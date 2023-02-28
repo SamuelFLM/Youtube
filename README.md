@@ -19,3 +19,7 @@
 
 > Logo Apos Realizar o download abrir projeto inicializar o exe.
 <img src="doc\img\exe.png" alt="logo_samuelflm">
+
+# O video baixado e agora?
+
+> O video baixado vai se localizar na mesma pasta onde se encontra o sistema.

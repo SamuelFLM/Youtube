@@ -7,10 +7,14 @@
 > Um sistema/bot que vai melhorar sua facilidade para realizar qualquer download do youtube.<br>
 > Projeto foi pensando e desenvolvido com o proposito de praticar e aplicar conceitos tecnicos de programacao.<br> Sem Fins lucrativos ou algo para prejudicar a marca..
 
-# Projeto Nao finalizado em fases de desenvolvimento e testes.
+### Projeto Finalizado.
 
-### Progresso
+> Tela do Sistema
+<img src="doc\img\home.png" alt="logo_samuelflm">
 
+### Como baixar o sistema.
 
-### Como Usar localmente
+> Para utilizar o sistema basta realizar o download via git clone ou realizar download via zip.
+<img src="doc\img\git_.png" alt="logo_samuelflm">
 
+> Logo Apos Realizar o download abrir projeto inicializar o exe.

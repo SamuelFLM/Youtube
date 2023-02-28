@@ -18,3 +18,4 @@
 <img src="doc\img\git_.png" alt="logo_samuelflm">
 
 > Logo Apos Realizar o download abrir projeto inicializar o exe.
+<img src="doc\img\exe.png" alt="logo_samuelflm">

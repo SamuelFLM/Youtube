@@ -30,26 +30,28 @@ def main():
         if event == sg.WIN_CLOSED:
             break
         
-        
-        if bool(values["link"]):
-            url = str(values["link"])
-            validacao = re.search("^(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+",url)
-            if validacao:
-                yt = YouTube(url=url)
-                window["baixar"].update(filename="img\Group 13.png")
-                window["titulo"].update(f"{yt.title}")
+        try:
+            if bool(values["link"]):
+                url = str(values["link"])
+                validacao = re.search("^(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+",url)
+                if validacao:
+                    yt = YouTube(url=url)
+                    window["baixar"].update(filename="img\Group 13.png")
+                    window["titulo"].update(f"{yt.title}")
+                    if event == "baixar":
+                        bot.confirm(title="Iniciando", text="Iniciar Download.", buttons=["OK"])
+                        ys = yt.streams.get_highest_resolution()
+                        ys.download()
+                        bot.confirm(title="Concluido", text="Download Concluido.", buttons=["OK"])
+            else:
+                if bool(values["link"]) == False:
+                    window["baixar"].update(filename="img\Group 13 (1).png")
+                    window["titulo"].update("")
                 if event == "baixar":
-                    bot.confirm(title="Iniciando", text="Iniciar Download.", buttons=["OK"])
-                    ys = yt.streams.get_highest_resolution()
-                    ys.download()
-                    bot.confirm(title="Concluido", text="Download Concluido.", buttons=["OK"])
-        else:
-            if bool(values["link"]) == False:
-                window["baixar"].update(filename="img\Group 13 (1).png")
-                window["titulo"].update("")
-            if event == "baixar":
-                bot.confirm(title="Erro", text="Insira o link do video", buttons=["OK"])
-        if event == "ajuda":
-            webbrowser.open_new_tab("https://github.com/SamuelFLM/Youtube-Bot-Download")
+                    bot.confirm(title="Erro", text="Insira o link do video", buttons=["OK"])
+            if event == "ajuda":
+                webbrowser.open_new_tab("https://github.com/SamuelFLM/Youtube-Bot-Download")
+        except:
+            pass
 if __name__ == "__main__":
     main() 
